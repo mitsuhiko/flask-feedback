@@ -52,6 +52,10 @@ class Feedback(db.Model):
             return '-'
         return '?'
 
+    @property
+    def is_happy(self):
+        return self.kind == self.HAPPY
+
     def to_json(self):
         return {
             'kind':     self.kind_symbol,
