@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% block title %}Give Feedback{% endblock %}
+{% block body %}
+  <h2>We Love Feedback</h2>
+  <p>
+    Are you happy with <a href=http://flask.pocoo.org/>Flask</a>?  Or is
+    something not right?  We would love to hear your opinion about your
+    experience with Flask in 140 characters or less so that we can
+    become better.
+  <form action="" method=post class=feedback>
+    <ul>
+      <li id=step-1>
+        Flask makes me <span class=kind-selector><a href=# class=happy>happy</a></span> /
+        <span class=kind-selector><a href=# class=unhappy>unhappy</a></span> because …
+      <li id=step-2>
+        <p class=text><textarea name=feedback cols=50 rows=2></textarea>
+      <li id=step-3>
+        <p class=version>
+          <input class=submit type=submit value="Share this">
+          BTW. I am using Flask Version <input type=text name=version>
+    </ul>
+    <div class=hidden>
+      <input type=hidden name=kind>
+      <input type=hidden name=challenge value="{{ challenge }}">
+    </div>
+  </form>
+  <p class=javascript-required>
+    <strong>We're sorry</strong>, but this system requires JavaScript to be
+    available in order to give feedback.  Please whitelist this website in
+    order to use it.
+{% endblock %}

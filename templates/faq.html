@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+{% block title %}Frequently Asked Questions{% endblock %}
+{% block body %}
+  <h2>Frequently Asked Questions</h2>
+  <dl class=qa>
+    <dt>What's the purpose of this website?
+    <dd>
+      <p>
+        The guys from Mozilla did an experiment during the deployment of the
+        Firefox 4 betas where they added a button into the toolbar with a
+        happy and a sad face.  Upon clicking that button the user was taken
+        to a website that asked him in less than 140 characters about their
+        experience with Firefox.
+      <p>
+        While we cannot integrate that into Flask in the same way because we do
+        not have any kind of user interface that could accomodate such a button,
+        we however encourage users to send us little messages about their
+        experience with Flask.
+    <dt>Why is this not on the main Flask website?
+    <dd>
+      <p>
+        For the very simple reason that this is an experient on its own and
+        might be shut down without further notice.  We haven't done anything
+        like that before and are not yet sure about the consequences.
+    <dt>Will you censor here?
+    <dd>
+      <p>
+        Unless hateful comments or spam end up on this website we will not
+        remove any of them.  The raw data is available for everyone who is
+        interested.
+    <dt>Why does this website require JavaScript?
+    <dd>
+      <p>
+        For the very simple reason that we currently use JavaScript as a simple
+        method of preventing spam.  At least that is the motivation, if the
+        efforts pay off we can't say yet.
+    <dt>Is the source of this website available?
+    <dd>
+      <p>
+        Indeed it is.  You can download it from github:<br>
+        <a href=http://github.com/mitsuhiko/flask-feedback>mitsuhiko/flask-feedback</a>
+  </dl>
+{% endblock %}

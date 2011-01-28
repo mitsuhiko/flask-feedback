@@ -1,0 +1,70 @@
+/* general style */
+body         { font-family: 'Georgia', serif; font-size: 17px; color: #000; }
+a            { color: #004B6B; }
+a:hover      { color: #6D4100; }
+.box         { width: 540px; margin: 40px auto; }
+h2, h3       { font-family: 'Garamond', 'Georgia', serif; font-weight: normal; }
+h1           { margin: 0; background: url(logo.png) no-repeat; height: 140px }
+h1 span      { display: none; }
+h2           { font-size: 36px; margin: 15px 0 5px 0; }
+h3           { font-size: 30px; margin: 15px 0 5px 0; }
+p            { line-height: 1.4; }
+.footer      { font-size: 13px; color: #888; text-align: right; margin-top: 25px; }
+.hidden      { display: none; }
+
+/* navigation */
+.nav                { height: 42px; margin: -35px 0 0 0; padding: 0; font-size: 15px;
+                      list-style: none; }
+.nav li:before      { display: none; }
+.nav li             { float: left; padding: 0; background: #D3E6EC;
+                      margin: 0 8px 0 0; }
+.nav li a           { padding: 4px 8px; display: block; text-decoration: none; }
+.nav li a:hover     { color: white; background: #004B6B; }
+.nav .active a      { border-bottom: 3px solid #004B6B; }
+.pagination         { margin: 15px 0; text-align: center; }
+
+/* feedback box */
+.feedback                       { font-size: 17px; border: 1px solid #A2BEC7;
+                                  padding: 0 20px; background: #EDF5F8;
+                                  display: none; }
+.feedback .happy,
+.feedback .unhappy              { padding: 2px 5px; border: 1px solid transparent; }
+.feedback .happy                { background: #CBE2CA; color: #1D7324; }
+.feedback .active-kind .happy   { border: 1px solid #1D7324; }
+.feedback .unhappy              { background: #E3CACA; color: #741D1D; }
+.feedback .active-kind .unhappy { border: 1px solid #741D1D; }
+.feedback .kind-selector a      { text-decoration: none; }
+.feedback input,
+.feedback textarea              { font-family: 'Georgia', serif; font-size: 24px;
+                                  border: 1px solid #A2BEC7; padding: 2px 5px; }
+.feedback .text textarea        { width: 487px; }
+.feedback p                     { margin: 0; padding: 10px 0 0 0; }
+.feedback ul                    { margin: 15px 0; padding: 0; list-style: none; }
+.feedback li                    { margin: 0; padding: 0; }
+.feedback p.version input       { width: 50px; text-align: center; font-size: 17px;
+                                  margin-left: 7px; }
+.feedback .submit               { float: right; background: #D3E6EC; border-style: outset;
+                                  cursor: pointer; }
+.feedback .submit:active        { background: white; border-style: inset; }
+.feedback .chars-left           { display: block; float: right; margin-top: -32px;
+                                  font-weight: bold; font-size: 15px; }
+.feedback .chars-over-limit     { color: #A52020; }
+.feedback .error                { font-size: 15px; color: #A52020; font-weight: bold; }
+
+/* feedback list */
+.feedback-list                  { list-style: none; margin: 30px 30px; padding: 0; }
+.feedback-list li               { margin: 15px 0; padding: 0; }
+.feedback-list p                { margin: 0; }
+.feedback-list p.text           { font-style: italic; }
+.feedback-list p.meta           { font-size: 15px; color: #666; margin-left: 20px; }
+
+/* single message */
+.message            { margin: 30px 0; }
+.message h2         { font-style: italic; font-size: 46px; text-align: center; }
+.message .meta      { color: #666; margin-top: 30px; text-align: right; }
+
+/* faq */
+dl.qa dt        { margin: 15px 0 10px 0; font-style: italic; }
+dl.qa dt:before { content: "Q: "; font-weight: bold; }
+dl.qa dd:before { content: "A: "; font-weight: bold; float: left; line-height: 1.4;
+                  padding-right: 5px; }

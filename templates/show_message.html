@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% block title %}Single Message{% endblock %}
+{% block body %}
+  <div class=message>
+    <h2>“{{ feedback.text }}”</h2>
+    <p class=meta>
+      written on {{ feedback.pub_date.strftime('%Y-%m-%d at %H:%M') }}
+      {% if feedback.version %}about Flask-{{ feedback.version }}{% endif %}
+  </div>
+{% endblock %}

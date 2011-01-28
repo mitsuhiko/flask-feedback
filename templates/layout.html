@@ -1,0 +1,38 @@
+<!doctype html>
+<title>{% block title %}{% endblock %} | Flask Feedback</title>
+<link href={{ url_for('static', filename='style.css') }} rel=stylesheet type=text/css>
+<script type=text/javascript src=https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js></script>
+<script type=text/javascript src={{ url_for('static', filename='script.js') }}></script>
+<div class=box>
+  <div class=header>
+    <h1><span>Flask Feedback</span></h1>
+    <ul class=nav>
+    {%- for endpoint, title in [
+        ('give_feedback', 'Give Feedback'),
+        ('happy', 'What people like'),
+        ('unhappy', 'Where we have to improve')
+    ] %}
+      <li{% if endpoint == request.endpoint %} class=active{% endif
+        %}><a href={{ url_for(endpoint) }}>{{ title }}</a>
+    {%- endfor %}
+    </ul>
+  </div>
+  {%- with messages = get_flashed_messages() %}
+    {%- if messages %}
+      <ul class=messages>
+      {%- for message in messages %}
+        <li>{{ message }}
+      {%- endfor %}
+      </ul>
+    {%- endif %}
+  {%- endwith %}
+  <div class=body>{% block body %}{% endblock %}</div>
+  <div class=footer>
+    <p>
+      &copy; Copyright 2011 by <a href=http://lucumr.pocoo.org/>Armin Ronacher</a>
+      and the Flask Team.<br>
+      Get the raw data as <a href={{ url_for('export_text') }}>text</a> or
+      <a href={{ url_for('export_json') }}>json</a> for playing around.
+      <a href={{ url_for('faq') }}>faq</a>
+  </div>
+</div>
