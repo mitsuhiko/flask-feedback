@@ -28,12 +28,12 @@ p            { line-height: 1.4; }
                                   padding: 0 20px; background: #EDF5F8;
                                   display: none; }
 .feedback .happy,
-.feedback .unhappy              { padding: 2px 5px; border: 1px solid transparent; }
-.feedback .happy                { background: #CBE2CA; color: #1D7324; }
-.feedback .active-kind .happy   { border: 1px solid #1D7324; }
-.feedback .unhappy              { background: #E3CACA; color: #741D1D; }
-.feedback .active-kind .unhappy { border: 1px solid #741D1D; }
-.feedback .kind-selector a      { text-decoration: none; }
+.feedback .unhappy              { padding: 2px 5px; border: 1px solid transparent;
+                                  background: #F8FCFD; }
+.feedback .active-kind .happy   { border: 1px solid #1D7324;
+                                  background: #CBE2CA; color: #1D7324; }
+.feedback .active-kind .unhappy { border: 1px solid #741D1D;
+                                  background: #E3CACA; color: #741D1D; }
 .feedback input,
 .feedback textarea              { font-family: 'Georgia', serif; font-size: 24px;
                                   border: 1px solid #A2BEC7; padding: 2px 5px; }
