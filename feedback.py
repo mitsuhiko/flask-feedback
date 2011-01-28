@@ -14,9 +14,9 @@
 
 from datetime import datetime
 from random import SystemRandom
-from flask import Flask, render_template, session, flash, request, \
+from flask import Flask, render_template, session, request, \
      url_for, redirect, Response, jsonify
-from flaskext.sqlalchemy import SQLAlchemy, Pagination
+from flaskext.sqlalchemy import SQLAlchemy
 
 
 app = Flask(__name__)
@@ -151,7 +151,3 @@ def export_json(version):
         q = q.filter_by(version=version)
     messages = q.order_by(Feedback.pub_date).all()
     return jsonify(messages=[fb.to_json() for fb in messages])
-
-
-if __name__ == '__main__':
-    app.run()
