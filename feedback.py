@@ -40,7 +40,7 @@ class Feedback(db.Model):
     def __init__(self, kind, text, version):
         assert kind in (self.UNHAPPY, self.HAPPY)
         self.kind = kind
-        self.text = text
+        self.text = u' '.join(text.split())
         self.version = version
         self.pub_date = datetime.utcnow()
 
