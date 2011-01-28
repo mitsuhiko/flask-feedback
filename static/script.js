@@ -44,7 +44,7 @@ function makeFeedbackBox(feedback) {
       return false;
     }
     if (this.version.value.length > 0 &&
-        !this.version.value.match(/^((\d{1,5}\.\d{1,5})|(dev))$/)) {
+        !this.version.value.match(/^((\d{1,5}\.\d{1,5}(\.\d{1,3})?)|(dev))$/)) {
       showFormError('Malformed version.  Use Major.Minor or dev');
       return false;
     }
