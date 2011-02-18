@@ -44,7 +44,7 @@ p            { line-height: 1.4; }
 .feedback p.version input       { width: 50px; text-align: center; font-size: 17px;
                                   margin-left: 7px; }
 .feedback .submit               { float: right; background: #D3E6EC; border-style: outset;
-                                  cursor: pointer; }
+                                  cursor: pointer; width: auto!important; }
 .feedback .submit:active        { background: white; border-style: inset; }
 .feedback .chars-left           { display: block; float: right; margin-top: -32px;
                                   font-weight: bold; font-size: 15px; }
